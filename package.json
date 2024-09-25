@@ -1,22 +1,22 @@
 {
-    "name": "roadmap-generator",
-    "version": "1.0.0",
-    "description": "Roadmap Generator Application",
-    "main": "server/script.js",
-    "scripts": {
-      "start": "node server/script.js",
-      "build": "cd client && npm run build",
-      "dev": "concurrently \"npm run server\" \"npm run client\"",
-      "server": "node server/script.js",
-      "client": "cd client && npm run dev"
-    },
-    "dependencies": {
-      "express": "^4.17.1",
-      "cors": "^2.8.5",
-      "groq-sdk": "^0.3.0",
-      "dotenv": "^10.0.0"
-    },
-    "devDependencies": {
-      "concurrently": "^6.2.0"
-    }
+  "name": "roadmap-generator",
+  "version": "1.0.0",
+  "description": "Roadmap Generator Application",
+  "main": "server/script.js",
+  "scripts": {
+    "start": "bun server/script.js",
+    "build": "cd client && bun install && bun run build",
+    "dev": "concurrently \"bun run server\" \"bun run client\"",
+    "server": "node server/script.js",
+    "client": "cd client && bun run dev"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "groq-sdk": "^0.3.3",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.5.1"
+  }
 }
